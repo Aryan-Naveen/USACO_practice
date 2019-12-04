@@ -26,6 +26,9 @@ if(testing):
         output = task(input)
         if(verify(output, i)):
             count += 1
+        else:
+            print('File Number:' + str(i + 1))
+            print('Your output:' + str(output))
     print("The percentage of correct answers was " + str((count/num_test_files)*100) + "%")
 
 else:
